@@ -3,6 +3,9 @@ src/cleandata
 *.pth
 *.h5
 output/
+models/
+data/
+cleandata/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
