@@ -1,5 +1,5 @@
 src/data/
-src/cleandata
+src/cleandata/
 *.pth
 *.h5
 output/
