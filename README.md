@@ -19,9 +19,15 @@ The pipeline includes dataset preparation, model training with U-Net generators 
 ---
 
 ## 🖼️ Style Transfer Example
-> _Original photo (left), van Gogh style (center), Monet style (right)_
+> _Original photo (left), monet style (right)
 
-![Style Transfer Example](path_to_placeholder_image1)
+![Style Transfer Example](src/OUTPUT_IMAGES/vangogh1.png)
+![Style Transfer Example](src/OUTPUT_IMAGES/vangogh2.png)
+
+> _Original photo (left),Monet style (right)
+![Style Transfer Example](src/OUTPUT_IMAGES/monet1.png)
+![Style Transfer Example](src/OUTPUT_IMAGES/monet2.png)
+
 
 ---
 
@@ -66,3 +72,18 @@ Ensures outputs are realistic using **Mean Squared Error (MSE)**:
 ```python
 gen_loss_G = MSE(D_Y(G(X)), 1)
 total_disc_loss = 0.5 * (disc_loss_real + disc_loss_fake)
+
+```
+### Results
+The model achieves:
+- **Style Accuracy**: Captures van Gogh’s bold strokes and Monet’s soft textures.
+- **Visual Quality**: Produces aesthetically pleasing, artwork-like images.
+- **Content Preservation**: Retains input details, validated by low cycle-consistency loss.
+
+**Training Loss**:
+
+| Style Target | Approximate Loss Value |
+|--------------|------------------------|
+| Van Gogh     | 3.0                    |
+| Monet        | 2.104                  |
+
